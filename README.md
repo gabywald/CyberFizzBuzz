@@ -19,13 +19,34 @@ L'intérêt est que le candidat *explique* la démarche (et montre également co
 
 Ouvert à d'autres idées sur le même principe, de la même façon que http://99-bottles-of-beer.net/ <http://99-bottles-of-beer.net/>
 
+## Autres tests ("Machines à Sous")
+
+Tests pour éprouver les connaissances sur usage des Interfaces, des patrons de conception (Design Patterns) et des différents niveaux d'accessibilité. 
+
+Façon de voir et vérifier la façon de coder en général. 
+
+Il existe aussi des variantes en algorithmie (façon de décompter la monnaie, trier les instances d'objets...), un exercice de style. 
+
+### Monnayeur / ChangeMachine / SlotMachine
+
+Sur une machine composée de 'slots' contenant des pièces : à partir d'un montant donné en entrée, faire le décompte de la monnaie rendue en partant des pièces de montants les plus élevés. 
+
+Contrainte : interface ISlot ayant seulement les méthodes suivantes : int coinValue(); int coinCount(); boolean isEmpty();
+
+### Transactions de Monnayeur
+
+Une variante de l'exercice précédent, on instancie ici des transactions, avec une Interface contrainte par les méthodes suivantes : void reservedCount(int); boolean commit(); boolean rollback();
+
+L'idée étant que ces méthodes de l'interface lèvent une exception (TransactionException) si le montant réservé est incorrect (négatif), ou si la transaction a déjà été appliquée (commit / rollback). 
+
 ## Configuration Projet
 
 Eclipse
 Java 8
-Méthode 'main' dans chaque exemple (3)
+Méthode 'main' dans chaque exemple (3) pour le 'CyberFizzBuzz'. 
+Méthode 'main' dans package dédié pour les "machines à sous". 
 
-## Quelques liens sur le sujet (et la réflexion qui va avec, à propos de ce fameux test)
+## Quelques liens sur le sujet CyberFizzBuzz (et la réflexion qui va avec, à propos de ce fameux test de recrutement en programmation / informatique)
 
 https://paperstreet.picty.org/yeye/2018/conf-ressi-JaegerLL18/ --
 
