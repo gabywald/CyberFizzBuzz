@@ -39,6 +39,10 @@ Une variante de l'exercice précédent, on instancie ici des transactions, avec 
 
 L'idée étant que ces méthodes de l'interface lèvent une exception (TransactionException) si le montant réservé est incorrect (négatif), ou si la transaction a déjà été appliquée (commit / rollback). 
 
+### Remplacement de Switch
+
+Question "Par quoi remplacer un switch dans du code ?" (pour diverse raisons : assurer maintenabilité, lisibilité...), en l'occurence le Design Pattern / Patron de Conception 'Command' ('Strategy' peut fonctionner aussi). La réponse consiste plus dans la façon de faire que dans la dénomination. 
+
 ## Configuration Projet
 
 Eclipse
