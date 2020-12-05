@@ -1,6 +1,10 @@
 package gabywald.projet.patterns;
 
-public class CommandA implements Command {
+/**
+ * 
+ * @author Gabriel Chandesris (2020)
+ */
+public class CommandA implements ICommand {
 	@Override
 	public void execute() {
 		System.out.println("Commandd A");

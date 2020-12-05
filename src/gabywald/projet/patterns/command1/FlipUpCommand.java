@@ -2,8 +2,9 @@ package gabywald.projet.patterns.command1;
 
 /**
  * The Command for turning on the light - ConcreteCommand #1
+ * @author Gabriel Chandesris (2020)
  */
-public class FlipUpCommand implements Command {
+public class FlipUpCommand implements ICommand {
 
    private Light light;
 
@@ -11,8 +12,9 @@ public class FlipUpCommand implements Command {
       this.light = light;
    }
    
-   @Override // Command
+   @Override // ICommand
    public void execute() {
       this.light.turnOn();
    }
+   
 }

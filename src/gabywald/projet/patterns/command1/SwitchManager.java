@@ -6,23 +6,25 @@ import java.util.List;
 
 /**
  * Invoker Class. 
+ * @author Gabriel Chandesris (2020)
  */
 public class SwitchManager {
 
-	private final HashMap<String, Command> commandMap	= new HashMap<>();
+	private final HashMap<String, ICommand> commandMap	= new HashMap<>();
 	
-	private List<Command> history						= new ArrayList<Command>();
+	private List<ICommand> history						= new ArrayList<ICommand>();
 
-	public void register(String commandName, Command command) {
+	public void register(String commandName, ICommand command) {
 		this.commandMap.put(commandName, command);
 	}
 
 	public void execute(String cmdName) {
-		Command command = this.commandMap.get(cmdName);
+		ICommand command = this.commandMap.get(cmdName);
 		if (command == null) {
 			throw new IllegalStateException("No command registered for {" + cmdName + "}");
 		}
 		this.history.add(command); // optional 
 		command.execute();        
 	}
+	
 }

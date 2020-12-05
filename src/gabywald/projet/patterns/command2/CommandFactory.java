@@ -4,7 +4,8 @@ import java.util.HashMap;
 
 /**
  * The CommandFactory class. <br/>
- * Singleton Pattern
+ * <i>Singleton Pattern</i>
+ * @author Gabriel Chandesris (2020)
  */
 public class CommandFactory {
 

@@ -1,12 +1,16 @@
 package gabywald.projet.patterns;
 
+/**
+ * 
+ * @author Gabriel Chandesris (2020)
+ */
 public class PatternCommandSample {
 	
 	public static void main(String[] args) {
 		CommandContainer cc = new CommandContainer();
 		cc.add("A", new CommandA());
 		cc.add("B", new CommandB());
-		cc.add("C", new Command() {
+		cc.add("C", new ICommand() {
 			@Override
 			public void execute() {
 				System.out.println("Command C");
