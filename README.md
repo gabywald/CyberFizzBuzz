@@ -43,6 +43,61 @@ L'idée étant que ces méthodes de l'interface lèvent une exception (Transacti
 
 Question "Par quoi remplacer un switch dans du code ?" (pour diverse raisons : assurer maintenabilité, lisibilité...), en l'occurence le Design Pattern / Patron de Conception 'Command' ('Strategy' peut fonctionner aussi). La réponse consiste plus dans la façon de faire que dans la dénomination. 
 
+## Quelques autres Coding Games vus
+
+Dans le même ordre d'idée que le CyberFizzBuzz : l'objectif est ici de mesurer la réflexion et éventuellement de connaître la rapidité de résolution de l'exercice, mais surtout de voir le degré de connaissance du langage de programmation par la personne qui passe le test. 
+
+### Liste de températures proches de zéro. 
+
+Dans cet exercice, il faut analyser des données de températures (positives et négatives), afin de trouver la plus proche de zéro dans un tableau de valeurs. 
+
+Si le tableau est vide, on renvoie 0. (NOTE : le tableau existe toujours / le tableau n'est jamais 'null'. ). 
+
+Si deux valeurs on la même valeur absolue, on renvoie la valeur positive. 
+
+Dans un contexte java, il s'agit de compléter la méthode suivante : 
+
+```
+static double closestToZero(double[] ts) {
+	// TODO completion here !!
+}
+
+```
+
+
+### Réorganisation d'un stock par un bras mécanique
+
+L'objectif est de réorganiser des piles de boites avec un bras mécanique, dans une fabrique, et de faire des piles de hauteur égales. Toutes les boites sont sur un certains nombre de piles. Il faut obtenir un nombre égal de boites sur les piles, sinon les boites en excès doivent être empilées de gauche à droite. 
+
+La méthode à implémenter va recevoir régulièrement le status actuel du bras robotique (sa position), le nombre de boites dans chaque pile (un tableau) et si le bras tient une boite. 
+
+Cette méthode doit retourner une commande par tout parmi les suivantes, jusqu'à ce que les boites soient correctement pisitionnées (au lieux en moins de 200 executions) : 
+
+* RIGHT : déplacement du bras robotique d'une pile vers la  __droite__  ; 
+* LEFT : déplacement du bras robotique d'une pile vers la  __gauche__  ; 
+* PICK : le bras robotique va  __prendre__  une boite dans la pile directement en dessous ; 
+* PLACE : le bras robotique va  __poser__  une boite dans la pile directement en dessous ; 
+
+```
+
+static String solve(int clawPos, int[] boxes, boolean boxInClaw) {
+	// TODO completion here !!
+	return "";
+}
+
+```
+
+NOTE sur les notions attendues ici : énumération, ...
+
+Cas de tests : 
+* Cas simple ; 
+* Un dans chaque ; 
+* Quelques dans chaque ; 
+* Répartition aléatoire ; 
+* ... 
+
+
+
 ## Configuration Projet
 
 Eclipse
