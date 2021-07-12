@@ -1,1 +1,16 @@
 /bin/
+
+*.bib.sav
+*.bib.bak
+*/**/*.pdf
+*/*.pdf
+*.pdf
+
+*.aux
+*.bbl
+*.blg
+*.log
+*.nav
+*.out
+*.snm
+*.toc
