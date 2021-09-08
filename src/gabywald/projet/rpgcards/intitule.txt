@@ -1,0 +1,110 @@
+
+20210907+ Sur une idée de Sygmei / https://github.com/Sygmei / @Sygmei#2222 sur Discord ( https://dojo.codes/ ORNESS ) 
+
+Exercice technique : Simulateur victoire / défaite jeu de cartes
+
+Difficulté : Avancé
+Temps de réalisation : 50 minutes
+
+Enoncé
+
+Étant donné les paramètres suivants :
+ - Points d'action par tour
+ - Nombre de tours maximum
+ - Santé de l'ennemi
+ - Cartes en mains
+
+Le programme doit renvoyer __vrai__ si il y a une possibilité de gagner le combat, __faux__ dans le cas contraire.
+Les cartes sont définies dans un fichier dans le format suivant : 
+
+*****
+        {
+            "id": "fireball",
+            "mana": 4,
+            "effects": [
+                {
+                    "type": "damage",
+                    "parameters": {
+                        "damage": 5,
+                        "duration": 1
+                    }
+                },
+                {
+                    "type": "damage",
+                    "parameters": {
+                        "damage": 1,
+                        "duration": 3
+                    }
+                }
+            ]
+        }
+*****
+        {
+            "id": "power_multiplicator",
+            "mana": 3,
+            "damage": 0,
+            "effects": [
+                {
+                    "type": "damage_modifier",
+                    "parameters": {
+                        "add": 0,
+                        "factor": 2
+                    }
+                }
+            ]
+        }
+*****
+
+Ci-dessus, deux cartes différentes définies au format JSON
+
+
+On peut observer les choses suivantes :
+ - Chaque carte possède un identifiant unique
+ - Chaque carte possède un coût d'action exprimé en __mana__
+ - Chaque carte possède un certain nombre d'actions
+ - Une action est définie par son type ainsi que ses paramètres
+ - Le type de l'action détermine les paramètres associés
+ - Les paramètres influent sur l'effet
+ 
+Pour l'exemple de la carte __fireball__, nous pouvons observer que son coût est de 4 points de
+__mana__ et qu'elle possède deux effets :
+ - Le premier effet inflige 5 points de dommage à l'adversaire sur le tour courant
+ - Le deuxième effet inflige 1 point de dommage sur le tour courant ainsi que les deux tours à venir
+
+On peut donc en déduire que l'effet de type __damage__ possède deux paramètres : __damage__ (le nombre de points de dommages infligés) et __duration__ (la durée d'effet des dommages).
+
+Pour l'exemple suivant, sur la carte __power_multiplicator__, on retrouve à nouveau un coût en __mana__ mais l'effet est différent.
+L'effet est cette fois-ci du type __damage_modifier__, permettant de modifier l'effet __dommage__ de la prochaine carte possédant un ou plusieurs effets __dommage__ posée durant le même tour.
+L'effet __damage_modifier__ permet de multiplier ou augmenter le nombre de points de dommages infligés grâce aux paramètres respectifs __factor__ et __add__.
+ - __factor__ permet de multiplier les dommages infligés par la prochaine carte possédant un effet dommage
+ - __add__ permet d'ajouter des points de dommage infligés à la prochaine carte possédant une effet dommage
+
+Si on pose deux cartes __power_multiplicator__ suivie de la carte __fireball__, voici le détail des dommages infligés :
+ - La première carte __power_multiplicator__ multipliera par 2 le nombre de dommages de la prochaine carte
+ - La deuxième carte __power_multiplicator__ ne possède pas d'effet __dommage__, elle n'est donc pas éligible à la multiplication de dommages, on passe le multiplicateur de dommage à x4
+ - La carte __fireball__ bénéficie d'un boost de dommage instantané passant les dommages à 5x4 (effet dommage 5 x multiplicateur de dommage 4) + 1x4 (effet dommage 1 x multiplicateur de dommage 4) = 24
+ - Il est important de noter que les deux dommages restants infligés aux deux tours suivants ne bénéficieront pas du boost de dommage (qui ne s'applique sur le tour courant !)
+
+Pour la gestion de la __mana__, il est à noter que les points non-utilisés pendant le tour courant sont reportés au tour suivant (et ainsi de suite) : si on n'utilise pas de mana pendant 4 tours à raison de 5 points offers par tour, on finira avec 20 points de mana à la fin du 4 ème tour. 
+
+D'après toutes ces consignes, il convient de coder un algorithme capable de dire si il existe un moyen de gagner le combat contre l'adversaire. Les conditions de victoire sont simple : réussir à passer le nombre de points de vie de l'adversaire à 0 ou moins durant le nombre de tours impartis.
+
+
+====================================================
+====================================================
+====================================================
+
+L'exercice est volontairement trop long par rapport à un temps imparti de résolution pour permettre d'analyser le cheminement (architecture et approche utilisées par le candidat), plutôt que le résultat. 
+Analyse de l'exercice et des solutions proposées : 
+ - POO (Programmation Orientée Objet), encapsulation de données et de méthodes spécifiques, flexibilités, énumérations ; 
+ - Design Patterns ; 
+ - Itérations, boucles... ; 
+ - Compteur : Consommation de la __mana__ ; 
+ - Approche(s) utilisant des tests (itératif ou non) ; 
+ - Optimisations 
+ 	* santé de l'adversaire déjà à 0, inutile de continuer à évaluer les cartes
+ 	* tests de combinatoires de cartes
+ 	* optimisation de la pile de cartes (coûts en mana, points de vies de l'adversaire, caldul d'un score / ratio ?)
+...
+
+

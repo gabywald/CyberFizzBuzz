@@ -1,6 +1,13 @@
-package gabywald.projet.rpg;
+package gabywald.projet.rpgcards;
+
+import java.util.List;
 
 public class Card {
+	private String id;
+	private int mana;
+	private List<Effect> effets;
+	
+	// TODO continuing here !! 
 
 	public int getMana() {
 		// TODO Auto-generated method stub

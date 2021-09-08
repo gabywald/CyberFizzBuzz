@@ -1,4 +1,4 @@
-package gabywald.projet.rpg;
+package gabywald.projet.rpgcards;
 
 import java.io.File;
 import java.util.List;
@@ -30,5 +30,8 @@ class RunnerTest {
 		Assertions.assertFalse( Runner.canIWinTheFight(0, 5, 100, loadedCards) );
 		
 	}
+	
+	// TODO tests with different combinations for list / set of cards : shuffle and other !
+	// note : heuristics ?
 
 }

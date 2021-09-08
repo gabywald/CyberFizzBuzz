@@ -1,4 +1,4 @@
-package gabywald.projet.rpg;
+package gabywald.projet.rpgcards;
 
 import java.util.List;
 
