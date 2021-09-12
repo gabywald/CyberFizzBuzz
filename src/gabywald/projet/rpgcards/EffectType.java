@@ -3,6 +3,10 @@ package gabywald.projet.rpgcards;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 
+ * @author Gabriel Chandesris (2021)
+ */
 public enum EffectType {
 	DAMAGE("damage", new String[]{ "damage", "duration" } ), 
 	MODIFIER("damage_modifier", new String[]{ "add", "factor" });

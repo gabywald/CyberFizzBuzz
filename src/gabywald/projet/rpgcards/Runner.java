@@ -2,6 +2,10 @@ package gabywald.projet.rpgcards;
 
 import java.util.List;
 
+/**
+ * 
+ * @author Gabriel Chandesris (2021)
+ */
 public class Runner {
 
 	// can_i_win_the_fight(mana_per_turn: int, turns: int, monster_health: int, cards: List[Card])

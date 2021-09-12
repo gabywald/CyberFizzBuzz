@@ -2,10 +2,14 @@ package gabywald.projet.rpgcards;
 
 import java.util.List;
 
+/**
+ * 
+ * @author Gabriel Chandesris (2021)
+ */
 public class Card {
 	private String id;
 	private int mana;
-	private List<Effect> effets;
+	private List<Effect> effects;
 	
 	// TODO continuing here !! 
 

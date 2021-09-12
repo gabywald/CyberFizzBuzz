@@ -2,6 +2,10 @@ package gabywald.projet.rpgcards;
 
 import java.util.List;
 
+/**
+ * 
+ * @author Gabriel Chandesris (2021)
+ */
 public class Effect {
 	
 	private EffectType type;
