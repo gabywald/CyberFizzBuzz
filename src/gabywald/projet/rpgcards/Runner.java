@@ -39,16 +39,23 @@ public class Runner {
 				if (currentCard.getMana() < currentMana) {
 					currentMana -= currentCard.getMana();
 					int damage = 0;
+					int duration = 1; // NOTE : how to take account of duration of effect (probably a separate counter !)
 					int modifier = 1;
-					if (currentCard.isDamage()) {
-						// set damage to correct value
-						damage = currentCard.getCurrentEffect();
-					} else if (currentCard.isModifier()) {
-						// set modifier to correct value
-					} else {
-						// unknown type of card !
+					int adder = 1;
+					for (Effect currentEff : currentCard.getEffects()) {
+						if (currentEff.isDamage()) {
+							// set damage to correct value
+							damage = currentEff.getDamage();
+							duration = currentEff.getDuration();
+						} else if (currentEff.isModifier()) {
+							// set modifier to correct value
+							modifier = currentEff.getFactor();
+							adder = currentEff.getAdd();
+						} else {
+							// unknown type of card !
+						}
+						currentDamage += modifier * damage + adder;
 					}
-					currentDamage += modifier * damage;
 				} else {
 					// not enough mana to use current card
 				}

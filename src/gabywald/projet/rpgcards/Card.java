@@ -1,5 +1,6 @@
 package gabywald.projet.rpgcards;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,26 +12,34 @@ public class Card {
 	private int mana;
 	private List<Effect> effects;
 	
+	public Card(String id, int mana) {
+		this.id = id;
+		this.mana = mana;
+		this.effects = new ArrayList<Effect>();
+	}
+	
+	public Card(String id, int mana, List<Effect> effects) {
+		this.id = id;
+		this.mana = mana;
+		this.effects = effects;
+	}
+	
 	// TODO continuing here !! 
 
+	public String getID() {
+		return this.id;
+	}
+	
 	public int getMana() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.mana;
+	}
+	
+	public void addEffect(Effect effect) {
+		this.effects.add(effect);
 	}
 
-	public boolean isDamage() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public boolean isModifier() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public int getCurrentEffect() {
-		// TODO Auto-generated method stub
-		return 0;
+	public List<Effect> getEffects() {
+		return this.effects;
 	}
 
 }

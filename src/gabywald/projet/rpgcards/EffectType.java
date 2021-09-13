@@ -26,4 +26,13 @@ public enum EffectType {
 	public List<String> getParameters() {
 		return this.parameters;
 	}
+	
+	public static EffectType getType(String name) {
+		for (EffectType type : EffectType.values()) {
+			if (name.equals(type.getName())) {
+				return type;
+			}
+		}
+		return null;
+	}
 }
