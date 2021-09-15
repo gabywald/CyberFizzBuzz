@@ -140,10 +140,10 @@ class RunnerTest {
 		List<Card> loadedCards = RunnerTest.getBaseLoadedCards();
 		// to show : loadedCards.stream().forEach(System.out::println);
 		// in this configuration (mana at 100, 5 turns, basic set of card), win again MH of 65 max. 
-		IntStream.rangeClosed(0, 65).forEach( monsterHealth -> {
+		IntStream.rangeClosed(0, 88).forEach( monsterHealth -> {
 			Assertions.assertTrue( Runner.canIWinTheFight(100, 5, monsterHealth, loadedCards) );
 		});
-		IntStream.rangeClosed(66, 100).forEach( monsterHealth -> {
+		IntStream.rangeClosed(89, 100).forEach( monsterHealth -> {
 			Assertions.assertFalse( Runner.canIWinTheFight(100, 5, monsterHealth, loadedCards) );
 		});
 	}
@@ -162,15 +162,16 @@ class RunnerTest {
 		// to show : sortedCards.stream().forEach(System.out::println);
 		
 		// in this configuration (mana at 100, 5 turns, basic set of card), win again MH of 65 max. 
-		IntStream.rangeClosed(0, 65).forEach( monsterHealth -> {
+		IntStream.rangeClosed(0, 88).forEach( monsterHealth -> {
 			Assertions.assertTrue( Runner.canIWinTheFight(100, 5, monsterHealth, sortedCards) );
 		});
-		IntStream.rangeClosed(66, 100).forEach( monsterHealth -> {
+		IntStream.rangeClosed(89, 100).forEach( monsterHealth -> {
 			Assertions.assertFalse( Runner.canIWinTheFight(100, 5, monsterHealth, sortedCards) );
 		});
 	}
 
 	// NOTE : possible evolution is to tests with different combinations for list / set of cards : 
-	// shuffle and other ? heuristics ?
+	// NOTE : shuffle and other ? heuristics ? Combinations ? Propose solutions ! (sorting as above, and other solutions). 
+	// NOTE possible optimisation : to take in only one turns ?!
 
 }

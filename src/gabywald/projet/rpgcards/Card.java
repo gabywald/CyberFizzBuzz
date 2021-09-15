@@ -24,8 +24,6 @@ public class Card {
 		this.effects = effects;
 	}
 	
-	// TODO continuing here !! 
-
 	public String getID() {
 		return this.id;
 	}

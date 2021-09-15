@@ -1,5 +1,6 @@
 package gabywald.projet.rpgcards;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,26 +16,35 @@ public class Runner {
 
 		// first taken in account: multipliers (factor), only on current turn
 		// duration / add : apply damage directly then each supplementary turn
-
 		// loop according to 
 		// - number of turns
 		// - monster health > 0
 		// cease to loop when not enough mana
-		// return true when monsterHealth at 0
+		// return true when monsterHealth at 0 or less
 		// return false either
 
-		// note : accumulator
+		// note : accumulators
 		int currentMana = 0; 
 		int currentMonsterHealth = monsterHealth;
-		
-		// List<> cards ... BUFFER
-		
-		// shuffle / combinations
-		// optimise to take in only one turns ?!
+
+		// Specific duration application
+		List<DurationCounter> durations = new ArrayList<DurationCounter>();
 
 		for (int currentTurn = 0 ; (currentTurn < turns) && (currentMonsterHealth > 0)  ; currentTurn++) {
 			currentMana += manaByTurn;
 			int currentDamage = 0;
+
+			// Apply Durations Damages !
+			for (DurationCounter d : durations) {
+				if ( d.isDurationApply() ) {
+					currentDamage += d.getDamage();
+					d.durationLess();
+				}
+				// Avoiding ConcurrentException here with directly removal from list
+				// { durations.remove(d); }
+			}
+
+			// Apply Cards in given order !
 			for (Card currentCard : cards) {
 				if (currentCard.getMana() < currentMana) {
 					currentMana -= currentCard.getMana();
@@ -55,12 +65,15 @@ public class Runner {
 							// unknown type of card !
 						}
 						currentDamage += modifier * damage + adder;
-						// XXX Impact of duration ?
+						// Impact of durations ?! => add current detected duration (with 1 turn unit less)
+						durations.add(new DurationCounter(duration - 1, damage));
 					}
 				} else {
 					// not enough mana to use current card
 				}
 			}
+
+			// Apply computed damages to Monster's Health
 			currentMonsterHealth -= currentDamage;
 		}
 

@@ -19,7 +19,7 @@ L'intérêt est que le candidat *explique* la démarche (et montre également co
 
 Ouvert à d'autres idées sur le même principe, de la même façon que http://99-bottles-of-beer.net/ <http://99-bottles-of-beer.net/>
 
-## Autres tests ("Machines à Sous")
+## Autres tests
 
 Tests pour éprouver les connaissances sur usage des Interfaces, des patrons de conception (Design Patterns) et des différents niveaux d'accessibilité. 
 
@@ -96,7 +96,19 @@ Cas de tests :
 * Répartition aléatoire ; 
 * ... 
 
+### "RPG Cards" : jeu de cartes de sortilèges contre montre
 
+On soumet un ensemble de cartes définissant des dommages appliqués à un monstre, chaque carte a un coût en 'mana' et définit un type d'effet, des dommages ou des multiplicateurs. 
+
+Comme pour les autres exercices, l'objectif n'est pas de donner une solution, mais d'expliquer la démarche. 
+
+Élements attendus de la part du candidat qui fait l'exercice (idéalement en direct et en un temps limité) : 
+  * Mise en place de tests ; 
+  * Combinatoire de tests ; 
+  * Conceptualisation et représentation objet ; 
+  * Optimisation de la pile de cartes (tri) ; 
+  * Gestion des instances d'objets (listes, sets...)
+  * ... 
 
 ## Configuration Projet
 
