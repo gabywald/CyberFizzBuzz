@@ -41,5 +41,16 @@ public class Card {
 	public List<Effect> getEffects() {
 		return this.effects;
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sbToReturn = new StringBuilder();
+		sbToReturn.append(this.id).append("::").append(this.mana)
+			.append(" (").append(this.effects.size()).append(")").append("\n");
+		this.effects.stream().forEach( e -> {
+			sbToReturn.append("\t").append( e.toString() ).append("\n");
+		});
+		return sbToReturn.toString();
+	}
 
 }

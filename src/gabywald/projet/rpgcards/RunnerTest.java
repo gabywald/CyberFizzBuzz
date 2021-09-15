@@ -3,8 +3,11 @@ package gabywald.projet.rpgcards;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -16,6 +19,8 @@ import org.junit.jupiter.api.Test;
  * @author Gabriel Chandesris (2021)
  */
 class RunnerTest {
+	
+	private static List<Card> baseLoadedCards = null;
 
 	public static JSONObject readAsJSON(String filePath) {
 		StringBuilder sbData = new StringBuilder();
@@ -82,8 +87,17 @@ class RunnerTest {
 		return toReturn;
 	}
 	
-	// TODO factorisation of loading the set of cards !!
-
+	public static List<Card> getBaseLoadedCards() {
+		if (RunnerTest.baseLoadedCards == null) {
+			// ***** Load the JSON source file => load JSON
+			JSONObject jsonCards = RunnerTest.readAsJSON("resources/rpgcards.json");
+			// System.out.println( jsonCards );
+			// List<Card> loadedCards = RunnerTest.loadingCards(jsonCards);
+			RunnerTest.baseLoadedCards = RunnerTest.loadingCards(jsonCards);
+		}
+		return RunnerTest.baseLoadedCards;
+	}
+	
 	@Test
 	void testCanIWinTheFight01() {
 		List<Card> loadedCards = null;
@@ -95,49 +109,68 @@ class RunnerTest {
 
 	@Test
 	void testCanIWinTheFight02() {
-		// ***** Load the JSON source file => load JSON
-		JSONObject jsonCards = RunnerTest.readAsJSON("resources/cards.json");
-		// System.out.println( jsonCards );
-		List<Card> loadedCards = RunnerTest.loadingCards(jsonCards);
-
+		List<Card> loadedCards = RunnerTest.getBaseLoadedCards();
 		// ***** call the canIWinTheFight method
 		Assertions.assertFalse( Runner.canIWinTheFight(0, 5, 100, loadedCards) );
 	}
 	
 	@Test
 	void testCanIWinTheFight03() {
-		// ***** Load the JSON source file => load JSON
-		JSONObject jsonCards = RunnerTest.readAsJSON("resources/cards.json");
-		// System.out.println( jsonCards );
-		List<Card> loadedCards = RunnerTest.loadingCards(jsonCards);
-
+		List<Card> loadedCards = RunnerTest.getBaseLoadedCards();
 		// ***** call the canIWinTheFight method
 		Assertions.assertFalse( Runner.canIWinTheFight(100, 5, 100, loadedCards) );
 	}
 	
 	@Test
 	void testCanIWinTheFight04() {
-		// ***** Load the JSON source file => load JSON
-		JSONObject jsonCards = RunnerTest.readAsJSON("resources/cards.json");
-		// System.out.println( jsonCards );
-		List<Card> loadedCards = RunnerTest.loadingCards(jsonCards);
-
+		List<Card> loadedCards = RunnerTest.getBaseLoadedCards();
 		// ***** call the canIWinTheFight method
 		Assertions.assertTrue( Runner.canIWinTheFight(100, 5, 20, loadedCards) );
 	}
 	
 	@Test
 	void testCanIWinTheFight05() {
-		// ***** Load the JSON source file => load JSON
-		JSONObject jsonCards = RunnerTest.readAsJSON("resources/cards.json");
-		// System.out.println( jsonCards );
-		List<Card> loadedCards = RunnerTest.loadingCards(jsonCards);
-
+		List<Card> loadedCards = RunnerTest.getBaseLoadedCards();
 		// ***** call the canIWinTheFight method
 		Assertions.assertTrue( Runner.canIWinTheFight(100, 5, 50, loadedCards) );
 	}
+	
+	@Test
+	void testCanIWinTheFight06() {
+		List<Card> loadedCards = RunnerTest.getBaseLoadedCards();
+		// to show : loadedCards.stream().forEach(System.out::println);
+		// in this configuration (mana at 100, 5 turns, basic set of card), win again MH of 65 max. 
+		IntStream.rangeClosed(0, 65).forEach( monsterHealth -> {
+			Assertions.assertTrue( Runner.canIWinTheFight(100, 5, monsterHealth, loadedCards) );
+		});
+		IntStream.rangeClosed(66, 100).forEach( monsterHealth -> {
+			Assertions.assertFalse( Runner.canIWinTheFight(100, 5, monsterHealth, loadedCards) );
+		});
+	}
+	
+	@Test
+	void testCanIWinTheFight07() {
+		List<Card> loadedCards = RunnerTest.getBaseLoadedCards();
+		
+		// Sort by ascending mana
+		List<Card> sortedCards = loadedCards.stream().sorted(new Comparator<Card>() {
+			@Override
+			public int compare(Card a, Card b) {
+		        return a.getMana() < b.getMana() ? -1 : a.getMana() == b.getMana() ? 0 : 1;
+			}
+		}).collect(Collectors.toList());
+		// to show : sortedCards.stream().forEach(System.out::println);
+		
+		// in this configuration (mana at 100, 5 turns, basic set of card), win again MH of 65 max. 
+		IntStream.rangeClosed(0, 65).forEach( monsterHealth -> {
+			Assertions.assertTrue( Runner.canIWinTheFight(100, 5, monsterHealth, sortedCards) );
+		});
+		IntStream.rangeClosed(66, 100).forEach( monsterHealth -> {
+			Assertions.assertFalse( Runner.canIWinTheFight(100, 5, monsterHealth, sortedCards) );
+		});
+	}
 
-	// TODO tests with different combinations for list / set of cards : shuffle and other !
-	// note : heuristics ?
+	// NOTE : possible evolution is to tests with different combinations for list / set of cards : 
+	// shuffle and other ? heuristics ?
 
 }

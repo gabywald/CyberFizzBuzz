@@ -2,6 +2,7 @@ package gabywald.projet.rpgcards;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  * 
@@ -51,6 +52,16 @@ public class Effect {
 	
 	public int getFactor() {
 		return (this.isModifier() ? this.parameters.get(1) : 1);
+	}
+	
+	public String toString() {
+		StringBuilder sbToReturn = new StringBuilder();
+		sbToReturn.append(this.type.getName()).append("::");
+		IntStream.range(0, this.type.getParameters().size()).forEach( i -> {
+			sbToReturn.append(this.type.getParameters().get( i ) )
+			.append( ":" ).append( this.parameters.get( i ) ).append( "//");
+		});
+		return sbToReturn.toString();
 	}
 
 }

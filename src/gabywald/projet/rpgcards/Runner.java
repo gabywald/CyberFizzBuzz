@@ -13,7 +13,7 @@ public class Runner {
 
 		if (cards == null) { return false; }
 
-		// first taken in accoutn: multipliers (factor), only on current turn
+		// first taken in account: multipliers (factor), only on current turn
 		// duration / add : apply damage directly then each supplementary turn
 
 		// loop according to 
@@ -29,17 +29,17 @@ public class Runner {
 		
 		// List<> cards ... BUFFER
 		
-		// shuffle / combinatoire
-		// optimiser en ramneant à un seul tour ?!
+		// shuffle / combinations
+		// optimise to take in only one turns ?!
 
-		for (int currentTurn = 0 ; currentTurn < turns ; currentTurn++) {
+		for (int currentTurn = 0 ; (currentTurn < turns) && (currentMonsterHealth > 0)  ; currentTurn++) {
 			currentMana += manaByTurn;
 			int currentDamage = 0;
 			for (Card currentCard : cards) {
 				if (currentCard.getMana() < currentMana) {
 					currentMana -= currentCard.getMana();
 					int damage = 0;
-					int duration = 1; // NOTE : how to take account of duration of effect (probably a separate counter !)
+					int duration = 1; // NOTE : how to take account of duration of effect ?? (probably a separate counter !)
 					int modifier = 1;
 					int adder = 1;
 					for (Effect currentEff : currentCard.getEffects()) {
@@ -55,15 +55,13 @@ public class Runner {
 							// unknown type of card !
 						}
 						currentDamage += modifier * damage + adder;
+						// XXX Impact of duration ?
 					}
 				} else {
 					// not enough mana to use current card
 				}
 			}
 			currentMonsterHealth -= currentDamage;
-			if (currentMonsterHealth <= 0) {
-				break;
-			}
 		}
 
 		return (currentMonsterHealth <= 0)?true:false;
