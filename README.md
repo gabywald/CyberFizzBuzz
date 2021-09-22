@@ -119,22 +119,23 @@ Méthode 'main' dans package dédié pour les "machines à sous".
 
 ## Quelques liens sur le sujet CyberFizzBuzz (et la réflexion qui va avec, à propos de ce fameux test de recrutement en programmation / informatique)
 
-https://paperstreet.picty.org/yeye/2018/conf-ressi-JaegerLL18/ --
+  * ["CyberFizzBuzz"](https://www.sstic.org/media/SSTIC2016/SSTIC-actes/fizzbuzz_cyber/SSTIC2016-Article-fizzbuzz_cyber-jaeger_levillain_kDY1GGu.pdf)
+  * [Cyber FizzBuzz : réflexion sur la sélection de candidats dans le
+domaine de la SSI (PDF article)](https://ressi2018.sciencesconf.org/187155/document)
+  * [Cyber FizzBuzz: réflexion sur la sélection de candidats
+dans le domaine de la SSI (PDF slides)](https://paperstreet.picty.org/yeye/resources/conf-ressi-JaegerLL18/slides.pdf)
+  * [Coding Dojo : Fizz Buzz (Kata)](http://codingdojo.org/kata/FizzBuzz/)
+  * [Cyber FizzBuzz : réflexion sur la sélection de candidats dans le domaine de la SSI](https://paperstreet.picty.org/yeye/2018/conf-ressi-JaegerLL18/)
 
-> Cyber FizzBuzz : réflexion sur la sélection de candidats dans le domaine de la SSI
+```
+Cyber FizzBuzz : réflexion sur la sélection de candidats dans le domaine de la SSI
 
->Entrée en langue française / French entry Catégorie: Conférence Auteurs: Éric Jaeger, Olivier Levillain et Christian Lixi
->Date: 23 mai 2018
+Entrée en langue française / French entry Catégorie: Conférence Auteurs: Éric Jaeger, Olivier Levillain et Christian Lixi
+Date: 23 mai 2018
 
->Pour le recrutement, il est utile de disposer de questions standards permettant d'apprécier rapidement l'aptitude des candidats à appréhender divers sujets et approches. Nous présentons dans cet article le processus de sélection des candidats à une formation technique en SSI -- des questions parfois éloignées du coeur du sujet, mais dont nous justifions la pertinence.
+Pour le recrutement, il est utile de disposer de questions standards permettant d'apprécier rapidement l'aptitude des candidats à appréhender divers sujets et approches. Nous présentons dans cet article le processus de sélection des candidats à une formation technique en SSI -- des questions parfois éloignées du coeur du sujet, mais dont nous justifions la pertinence.
 
->Présenté lors de la conférence RESSI à Nancy, France le 23 mai 2018
->BibTeX Document Présentation
+Présenté lors de la conférence RESSI à Nancy, France le 23 mai 2018
+```
 
-https://www.sstic.org/media/SSTIC2016/SSTIC-actes/fizzbuzz_cyber/SSTIC2016-Article-fizzbuzz_cyber-jaeger_levillain_kDY1GGu.pdf
 
-https://ressi2018.sciencesconf.org/187155/document --
-
-https://paperstreet.picty.org/yeye/resources/conf-ressi-JaegerLL18/slides.pdf
-
-http://codingdojo.org/kata/FizzBuzz/ --
