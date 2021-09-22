@@ -1,4 +1,5 @@
 # CyberFizzBuzz
+
 Tests Fizz Buzz de recrutement en programmation (et réflexions associées)
 
 Les examples de code proposés à côté sont en java, mais ce n'est pas le plus important
@@ -18,6 +19,8 @@ Quelques variantes possibles dans cet énoncé pour voir les concepts de program
 L'intérêt est que le candidat *explique* la démarche (et montre également comment il a comprit l'énoncé). Attention aux énoncés mal formulés ! (ici, ni exhaustif ni représentatif ; faire tester en aveugle si besoin). 
 
 Ouvert à d'autres idées sur le même principe, de la même façon que http://99-bottles-of-beer.net/ <http://99-bottles-of-beer.net/>
+
+La principale idée du CyberFizzBuzz est de tester les compétences d'un développeur en faisant du code ET de la revue de code lors d'un entretien en temps limité. 
 
 ## Autres tests
 
@@ -137,5 +140,11 @@ Pour le recrutement, il est utile de disposer de questions standards permettant 
 
 Présenté lors de la conférence RESSI à Nancy, France le 23 mai 2018
 ```
+
+## Quelques sites de tests de code / programmation
+
+  * https://www.codingame.com/
+  * https://codingdojo.org/
+  * https://devskiller.com/fr/coding-tests/
 
 
