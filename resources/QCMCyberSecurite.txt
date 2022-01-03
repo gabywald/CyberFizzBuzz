@@ -1,0 +1,181 @@
+
+1] Pourquoi la sécurité de l'information est-elle un domaine plus important que jamais ? ( 1 choix )
+
+ - L'information peut être dangereuse si elle n'a pas d'enveloppe sécurisée
+ - L'information apporte de la sécurité aux organisations
+ - Le hash d'une message (information) peut être compromis facilement avec l'utilisation de rainbow tables
+ - La pérénité des organisations est conditionnée à la sécurisation de la donnée
+___________________________________________________________________________________________________________
+
+2] Quel procédé mathématique permet de faire circuler de l'information de telle manière qu'elle ne peut pas être comprise si elle est interceptée ? ( 1 choix )
+
+ - La signature
+ - La stéganographie
+ - La cryptographie
+ - L' astrologie
+__________________________________________________________________________________________________________
+
+3] Comment bien sécuriser les mots de passe ? ( plusieurs choix )
+
+ - Utiliser des mots de passe simples
+ - Utiliser des mots de passe forts
+ - Utiliser des mots de passe et le multi-facteurs
+ - Réutiliser le même mot de passe dans chaque système d'information
+ - Utiliser un coffre fort à mot de passe répliqué dans le cloud
+ - Utiliser un fichier tableur sur le bureau Windows/Mac avec la liste des mots de passe
+ - Renouveller ses mots de passe régulièrement
+ - Ne donner son mot de passe qu'aux personnes de confiance qui ont signé un NDA
+_________________________________________________________________________________________________________
+
+4] Pourquoi chercher à faire de l'authentification renforcée ? ( une ou deux réponses selon votre niveau )
+
+ - Pour garantir la non répudiation
+ - Pour authentifier les signatures numériques
+ - Pour garantir de manière plus sûre que celui s'identifie est bien qui il prétend être
+ - Pour empêcher une attaque par interception type Man In The Middle
+__________________________________________________________________________________________________________
+
+5] En résumé la sécurité de l'information c'est : ( 1 choix )
+
+ - L'affaire du RSSI mandaté et supervisé par le CEO
+ - L'affaire du CEO assisté du RSSI utilisant une gouvernance efficace
+ - L'affaire de tous, sous l'oeil attentif du RSSI
+ - L'affaire du RSSI outillé de manière conforme au RGPD
+__________________________________________________________________________________________________________
+
+6] Une infra opérationnelle est déployée dans le cloud AWS. Cette infra comprenait entre autres la mise en oeuvre de security groups correctement paramétrés et le déploiement d'un agent de protection antivirus dont le moteur est à jour et le signatures également.
+Si un rootkit venait à être installé, une exfiltration de données : ( 1 choix )
+
+ - n'est pas possible car l' antivirus ( à jour ) l'aurait détécté puis bloqué
+ - est probable car un rootkit n'est en général pas détecté par l'antivirus et les security groups filtrent en général à l' entrée et peu en sortie
+ - n'est pas possible car les security groups l'empêcheraient forcément ( Software Designed Networking )
+ - est fort probable car le rootkit sera connecté à l' hyperviseur executant le service pour réaliser l'exfiltration
+__________________________________________________________________________________________________________
+
+7] Quels sont les critères les plus importants concernant les clés de chiffrements et les algos ( plusieurs choix )
+
+ - Elle doivent être impérativement rendues publiques et l'algorithme conservé secret
+ - Elles doivent être impérativement conservées secretes et l'algorithme rendu public
+ - Les clés publiques doivent être disponible pour celui qui en a besoin et les clés privées parfaitement protégées
+ - Les clés doivent être générées aléatoirement
+ - La clé doit être choisie pour être simple à gérer par l' émetteur
+ - Elles doivent durer le plus longtemps possible
+ - Elles doivent être renouvellées à intervalles réguliers
+_________________________________________________________________________________________________________
+
+8] Pourquoi n'utilise-t-on pas de manière généralisée dans tous les échanges une cryptographie asymétrique ? ( 1 choix )
+
+ - La mise en oeuvre est simple mais le niveau de sécurité atteint est faible et cela ne permet pas de créer des clés de session
+ - La mise en oeuvre est lourde mais le niveau de sécurité atteint est bon et cela permet de créer des clés de session
+ - Il est facile pour un attaquant de dériver la clé publique à partir de la clé de session
+ - Il est facile pour un attaquant de dériver la clé privée à partir de la clé de session
+_________________________________________________________________________________________________________
+
+9] Depuis combien de temps aproximativement l'homme protege-t-il de l'information par des techniques de chiffrement ?
+
+ - Plusieurs milliers d'années
+ - Plusieurs centaines d'années
+ - Plusieurs dizaines d'années
+ - Depuis l'ère du transistor, avant cette époque il s'agissait de stéganographie
+_________________________________________________________________________________________________________
+
+10] Quels sont les deux PRINCIPAUX RISQUES aujourd'hui pour les organisations ? ( 2 choix )
+
+ - Ne pas être conforme au SMSI
+ - Ne pas être conforme au GDPR
+ - Être infecté par un ransomware
+ - Être infecté par un virus
+ - Être envahi par le spam
+________________________________________________________________________________________________________
+
+11] Quelles propriétés doit garantir un système qui manipule de la donnée business ?( plusieurs choix )
+
+ - L'intégrité
+ - L'accusation
+ - L'intrication
+ - La confidentialité
+ - La preuve
+ - La GDPR
+ - La disponibilité
+________________________________________________________________________________________________________
+
+12] Vous venez de trouver une clé USB devant la porte d'accès au batiment. Que faites vous ? ( 1 choix )
+
+ - vous faites le tour des bureaux pour demander à qui elle appartient
+ - vous la connectez à votre poste de travail pour comprendre à qui elle appartient
+ - vous la laissez là ou vous l'avez trouvée
+ - vous l'amenez au service IT de l'entreprise en expliquant la provenance
+________________________________________________________________________________________________________
+
+13] Vous venez de recevoir un email d'EDF vous invitant à confirmer vos identifiant dans les plus brefs délais pour des raisons de sécurité. Que comptez vous faire ? ( plusieurs choix )
+
+ - Appeler EDF au numéro de téléphone indiqué
+ - Cliquer sur le lien fourni et rentrer vos identifiants pour vérifier qu'ils sont bien exacts et sécurisés
+ - Analyser l' authenticité de l' email en vérifiant si le site cible est bien la propriété d' edf
+ - Supprimer l' email
+ - Utiliser la fonction 'Report Spam' de votre interface webmail
+ - Mettre à jour Office
+________________________________________________________________________________________________________
+
+14] Quand votre navigateur se connecte à un site web en https, le chiffrement mis en oeuvre est
+
+ - symétrique
+ - disymétrique
+ - asymétrique
+ - hybride
+________________________________________________________________________________________________________
+
+15] En rapport avec le RGPD, quel est le point clé pour réaliser des traitements ?
+
+ - disposer d'une base juridique de traitement
+ - offrir le droit à l'oubli
+ - Tenir un registre pour tous les traitements
+ - Chiffrer les données avec un algorithme conforme au RGS
+________________________________________________________________________________________________________
+
+16] Qu'est-ce que EBIOS ?
+
+ - un BIOS amélioré
+ - une méthode de cadrage de la sécurité
+ - un recueil de l'état de l'art des contrôles conformes à l'ISO27001
+ - un système d'exploitation de premier niveau
+________________________________________________________________________________________________________
+
+17 ]Depuis quelques minutes vous avez noté une petite pendule avec des fleurs en bas à droite de votre écran.
+Cette dernière n'était pas là auparavant et vous n'avez rien installé de particulier.
+À présent une bulle vous propose de bénéficier de promotions exceptionnelles sur des produits multimédia.
+Que faites vous ?( plusieurs choix )
+
+ - Je lance un scan antivirus
+ - Je clique pour bénéficier des promotions
+ - J'appelle/je vais voir l' IT
+ - Je clique droit pour fermer la bulle de promotion
+ - J'appelle/je vais voir le RSSI
+ - Je redémarre ma machine
+ - Je mets à jour Office
+ - J'éteins ou je déconnecte ma machine du réseau
+________________________________________________________________________________________________________
+
+18] A votre avis la société XXX a-t-elle déja fait l'objet d'attaques informatiques ?
+
+ - Oui probablement
+ - Oui très certainement
+ - Non je ne pense pas
+ - Non c'est impossible
+________________________________________________________________________________________________________
+
+19] Dans le plupart des cas quel est le but d'un hacker ?
+
+ - Montrer sa toute puissance
+ - Déstabiliser une nation ou un gouvernement
+ - Déranger le fonctionnement d' Internet
+ - S'enrichir
+________________________________________________________________________________________________________
+
+20] En général comment les hackers se font ils payer par leurs victimes pour stopper leurs agissements ?
+
+ - en USDollars
+ - en Euros
+ - en cash
+ - en bitcoins
+ 
