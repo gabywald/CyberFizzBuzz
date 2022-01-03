@@ -4,7 +4,7 @@ Tests Fizz Buzz de recrutement en programmation (et réflexions associées)
 
 Les examples de code proposés à côté sont en java, mais ce n'est pas le plus important
 
-## Concept / idée du test
+## Concept de base / idée du test
 
 Une liste de nombres à afficher : 
 * si l'un d'entre eux est multiple de 3, afficher 'fizz'. 
@@ -21,6 +21,10 @@ L'intérêt est que le candidat *explique* la démarche (et montre également co
 Ouvert à d'autres idées sur le même principe, de la même façon que http://99-bottles-of-beer.net/ <http://99-bottles-of-beer.net/>
 
 La principale idée du CyberFizzBuzz est de tester les compétences d'un développeur en faisant du code ET de la revue de code lors d'un entretien en temps limité. 
+
+## Autres idées (à venir ?)
+
+Sujets de CyberSécurité, analyse / traitement de données, ... 
 
 ## Autres tests
 
@@ -111,6 +115,26 @@ Comme pour les autres exercices, l'objectif n'est pas de donner une solution, ma
   * Conceptualisation et représentation objet ; 
   * Optimisation de la pile de cartes (tri) ; 
   * Gestion des instances d'objets (listes, sets...)
+  * ... 
+
+## Data Engineering Tests (Data Science et Outils)
+
+### Analyse et Validation des données
+
+  * Cohérence des données (majuscules / minuscules) ; 
+  * Validation de types de valeurs connues (IPv4, IPv6, SIREN, IBAN, ...) ; 
+  * ... 
+
+### Traitement
+
+  * Chaine de traitement ; 
+  * Stockage (schéma de BDD relationnelles / SQL, graphe...) ; 
+  * ... 
+
+### Chargement
+
+  * Optimisations (Index, mémoire, parcours...) ; 
+  * Accès aux données (droits, parcours, ...) ; 
   * ... 
 
 ## Configuration Projet
