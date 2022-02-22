@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "2fcfbcaa-8c46-4bdb-95c5-e6ed2ea3f934",
+		"name": "Python Flask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local Python Flask GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/?name=alice",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "alice"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local Python Flask POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"bob\", \"email\": \"bob@outlook.com\" }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "bob",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "bob@example.org",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local Python Flask PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"bob\", \"email\": \"bob@outlook.com\" }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "bob",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "bob@example.org",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local Python Flask DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"bob\", \"email\": \"bob@outlook.com\" }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "bob",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,6 @@
+{
+    "email": "bob@outlook.com",
+    "name": "bob"
+}
+
+{ "name": "bob", "email": "bob@outlook.com" }
