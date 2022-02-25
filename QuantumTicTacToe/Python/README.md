@@ -66,6 +66,28 @@ Tasks to be done :
 
 *Remember the movie 'WarGames' : "A game where the best way to win is not to play !" (not the Tic-Tac-Toe !)*
 
+### "Getting better" some points
+
+  * TO BE stateless :
+    * Board and hash (private key and salt to generate only on server-side)
+    * T of board + hash on each transaction
+    * no record on server-side
+
+  * stateful : 
+    * BDD record if needed ; 
+    * Memory Python ; 
+    * Scalability in that case ?!
+    
+  * Quantum Part : 
+    * Graph representation
+    * Check if any library of that king already exists for that
+    
+  * externalisation / sharing of 'null value' if board (actually used is '-')
+
+  * Unit Tests !
+  * Check code with Python IDE
+  * pipy (et transfert vers typage plus fort)
+
 ## External resources
 
 ### Starting existing ideas of Tic-Tac-Toe
