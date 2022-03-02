@@ -71,7 +71,11 @@ Tasks to be done :
   * TO BE stateless :
     * Board and hash (private key and salt to generate only on server-side)
     * T of board + hash on each transaction
-    * no record on server-side
+    * no record on server-side (except master password to generate hash and salt)
+    
+    * https://medium.com/quick-code/aes-implementation-in-python-a82f582f51c2
+    * https://stackoverflow.com/questions/9594125/salt-and-hash-a-password-in-python
+    * https://www.tutorialspoint.com/cryptography_with_python/cryptography_with_python_quick_guide.htm
 
   * stateful : 
     * BDD record if needed ; 
@@ -81,11 +85,18 @@ Tasks to be done :
   * Quantum Part : 
     * Graph representation
     * Check if any library of that king already exists for that
+    * https://wiki.python.org/moin/PythonGraphApi
+    * https://wiki.python.org/moin/PythonGraphLibraries
+    * https://igraph.org/python/
     
   * externalisation / sharing of 'null value' if board (actually used is '-')
 
   * Unit Tests !
-  * Check code with Python IDE
+    * https://docs.python.org/3/library/unittest.html
+    * https://www.educba.com/unit-testing-in-python/
+    * https://www.geeksforgeeks.org/unit-testing-python-unittest/
+
+  * Check code with Python IDE (PyCharm for example)
   * pipy (et transfert vers typage plus fort)
 
 ## External resources
