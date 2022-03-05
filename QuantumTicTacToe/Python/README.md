@@ -20,6 +20,10 @@ Some notes about this implementation !
 
   * Ubuntu 20.04
   * Python 3.8.10
+  * Specific modules added in context : 
+    * PyCryptodome : pip3 install -U PyCryptodome
+    * Flask
+    * ... 
 
 Some Tests done with Postman
 

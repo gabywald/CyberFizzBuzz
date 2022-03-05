@@ -27,6 +27,8 @@ print( "Game UUID: ", data["party"], "\n" )
 
 rPlayGame = PlayerHelper.playerTurn( rCreateGame )
 
+print( rPlayGame )
+
 ## LOOP interaction with user !
 while( ("error" not in rPlayGame.json()) and ("finished" not in rPlayGame.json()) ):
   rPlayGame = PlayerHelper.playerTurn( rPlayGame )
