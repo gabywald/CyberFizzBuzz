@@ -1,0 +1,6 @@
+[
+  {
+    "name": "alice",
+    "email": "alice@outlook.com"
+  }
+]
