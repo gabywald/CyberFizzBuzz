@@ -24,7 +24,8 @@ La principale idée du CyberFizzBuzz est de tester les compétences d'un dévelo
 
 ## Autres idées (à venir ?)
 
-Sujets de CyberSécurité, analyse / traitement de données, ... 
+  * Sujets de CyberSécurité, analyse / traitement de données, ... 
+  * "Quantum Tic Tac Toe" (Python programming test, including pep 8, documentation, unit tests, stateful, security...)
 
 ## Autres tests
 
