@@ -15,6 +15,9 @@ links :
 	https://zetcode.com/perl/socket/
 	https://www.tutorialspoint.com/perl/perl_socket_programming.htm && https://www.tutorialspoint.com/perl/perl_quick_guide.htm
 	
+	https://www.tutorialspoint.com/perl/perl_socket_programming.htm
+	https://stackoverflow.com/questions/40915269/in-perl-socket-programming-how-to-send-a-data-from-client-and-receive-it-from-se
+	https://stackoverflow.com/questions/49189467/perl-and-server-client-sockets
      
 
 Perl socket
