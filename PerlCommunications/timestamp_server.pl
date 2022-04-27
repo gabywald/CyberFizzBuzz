@@ -49,6 +49,8 @@ print "SERVER started on port $port\n";
 ## 	close $new_socket;
 ## }
 
+my %torecord;
+
 my @ready;
 my $inp;
 
@@ -81,12 +83,25 @@ while(1) {
 			if ($inp) {
 				chomp($inp);
 				print "Received -- $inp \n";
+				
+				if (! defined( $torecord{$inp} )) 
+					{ $torecord{$inp} = 1; }
+				
 				# send reply back to client
 				send($so , "OK : $inp\n" , 0);
 			} else {
 				$so->close();
 			}
 		}
+	}
+	
+	if (keys(%torecord) > 1000) {
+		open (FILE,">>"."serverrecords.txt");
+		foreach my $key (sort(keys(%torecord)) ) {
+			print FILE $key."\n";
+		}
+		close(FILE);
+		%torecord = {};
 	}
 }
 
