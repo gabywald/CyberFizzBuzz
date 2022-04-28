@@ -1,0 +1,26 @@
+Dédoublonnage de SIRENs
+
+Version Back
+
+Soit le fichier sirens_fxt.txt contenant une liste de SIRENs
+
+On veut ajouter une fonctionnalité qui fait l'analyse de ce fichier (envoyé par un utilisateur) et récupérer le nombre de SIRENs qui sont présents au moins deux fois dans le fichier et le nombre de SIRENs qui ne sont présents qu'une fois.
+
+Ouvrir le fichier et en extraire les SIRENs
+Le parcourir pour en extraire les deux statistiques demandées
+Présenter le résultat, même de manière "brute"
+
+Contraintes:
+
+L'algo doit être le plus rapide possible
+Inclure des tests unitaires pour valider le code
+Doit s'éxecuter sous GNU/Linux (avec notice de compilation/lancement si non trivial)
+Pas de langage imposé
+
+Version Front
+
+Faire la même chose en utilisant JQuery sur sirens_fxt.html, mais en plus de présenter le résultat statistique, utiliser des classes CSS permettant de faire ressortir les SIRENs uniques
+
+Tout intégrer dans sirens_fxt.html
+Le résultat visuel sera pris en compte
+Tests unitaires non demandés (mais pourquoi pas)
