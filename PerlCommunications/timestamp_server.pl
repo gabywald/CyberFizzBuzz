@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 # Filename : server.pl
+# Gabriel Chandesris (2022)
 
 use strict;
 use Socket;
@@ -11,21 +12,21 @@ my $port = shift || 7890;
 my $proto = getprotobyname('tcp');
 my $server = "localhost";  # Host IP running the server
 
-# create a socket, make it reusable
+## Create a socket, make it reusable
 my $socket;
 socket($socket, PF_INET, SOCK_STREAM, $proto)
 	or die "Can't open socket $!\n";
 setsockopt($socket, SOL_SOCKET, SO_REUSEADDR, 1)
 	or die "Can't set socket option to SO_REUSEADDR $!\n";
 
-# bind to a port, then listen
+## Bind to a port, then listen
 bind( $socket, pack_sockaddr_in($port, inet_aton($server)) )
 	or die "Can't bind to port $port! \n";
 
 listen($socket, 5) or die "listen: $!";
 print "SERVER started on port $port\n";
 
-## # accepting a connection
+## # Accepting a connection
 ## my $new_socket;
 ## while (my $client_addr = accept($new_socket, SOCKET)) {
 ## 	$new_socket->autoflush();
@@ -49,7 +50,7 @@ print "SERVER started on port $port\n";
 ## 	close $new_socket;
 ## }
 
-my %torecord;
+my %torecord = ();
 
 my @ready;
 my $inp;
@@ -61,7 +62,7 @@ while(1) {
 	@ready = $s->can_read(0);
 	
 	foreach my $so (@ready) {
-		# new connection read
+		## New connection read
 		if ($so == $socket) {
 			my ($client);
 			my $addrinfo = accept($client , $socket);
@@ -77,9 +78,10 @@ while(1) {
 			$s->add($client);
 		}
 		
-		# existing client read
+		## Existing client read
 		else {
 			chomp($inp = <$so>);
+			## NOTE : here an error can occur if client has been closed !
 			if ($inp) {
 				chomp($inp);
 				print "Received -- $inp \n";
@@ -89,9 +91,7 @@ while(1) {
 				
 				# send reply back to client
 				send($so , "OK : $inp\n" , 0);
-			} else {
-				$so->close();
-			}
+			} else { $so->close(); }
 		}
 	}
 	
@@ -101,10 +101,10 @@ while(1) {
 			print FILE $key."\n";
 		}
 		close(FILE);
-		%torecord = {};
+		%torecord = ();
 	}
 }
 
-# close the socket
+## Close the socket
 close($socket);
 exit(0);

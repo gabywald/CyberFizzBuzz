@@ -1,13 +1,15 @@
 #!/usr/bin/perl -w
 # Filename : client.pl
+# Gabriel Chandesris (2022)
 
 use strict;
 use Socket;
-use IO::Handle;  # for autoflush
+use IO::Handle; ## For autoflush
 use Time::HiRes qw( sleep usleep );
-use Time::Format qw/%time/;
+use Time::Format qw/%time/; ## Need install via "cpan install Time::Format"
 use Time::HiRes qw/gettimeofday/;
 
+## Old version to get Time (without milliseconds)
 sub getLoggingTime {
     my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
     my $nice_timestamp = sprintf ( "%04d%02d%02d %02d:%02d:%02d.%03d",
@@ -15,6 +17,7 @@ sub getLoggingTime {
     return $nice_timestamp;
 }
 
+## New version to get Time (with milliseconds)
 sub getTimeStamp {
 	my $time = gettimeofday; # Returns ssssssssss.uuuuuu in scalar context
 	return qq|$time{'yyyymmdd hh:mm:ss.mmm', $time}\n|;
@@ -23,12 +26,12 @@ sub getTimeStamp {
 my $timestamping = getTimeStamp(); ## getLoggingTime();
 print $timestamping."\n";
 
-# initialize host and port
+## Initialize host and port
 my $host = shift || 'localhost';
 my $port = shift || 7890;
 my $server = "127.0.0.1";  # Host IP running the server
 
-# create the socket, connect to the port
+## Create the socket, connect to the port
 my $socket;
 socket( $socket, PF_INET, SOCK_STREAM, (getprotobyname('tcp'))[2] )
    or die "Can't create a socket $!\n";
@@ -36,7 +39,7 @@ connect( $socket, pack_sockaddr_in($port, inet_aton($server)) )
    or die "Can't connect to port $port! \n";
 
 $socket->autoflush();
-# flush after every write : $| = 1;
+## Flush after every write : $| = 1;
 
 my $recd;
 
