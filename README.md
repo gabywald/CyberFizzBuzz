@@ -22,18 +22,27 @@ Ouvert à d'autres idées sur le même principe, de la même façon que http://9
 
 La principale idée du CyberFizzBuzz est de tester les compétences d'un développeur en faisant du code ET de la revue de code lors d'un entretien en temps limité. 
 
+## Configuration Projet
+
+  * Eclipse 2020
+  * Java 8
+  * Méthode 'main' dans chaque exemple (3) pour le 'CyberFizzBuzz'. 
+  * Méthode 'main' dans package dédié pour les "machines à sous". 
+  * ... 
+
 ## Autres idées (à venir ?)
 
   * Sujets de CyberSécurité, analyse / traitement de données, ... 
   * "Quantum Tic Tac Toe" (Python programming test, including pep 8, documentation, unit tests, stateful, security...)
+  * FizzBuzz REST (Jersey, Spring...)
+  * "Coffee Machine Project" (Orientation TDD, outils de version de code...)
+  * ... 
 
 ## Autres tests
 
-Tests pour éprouver les connaissances sur usage des Interfaces, des patrons de conception (Design Patterns) et des différents niveaux d'accessibilité. 
-
-Façon de voir et vérifier la façon de coder en général. 
-
-Il existe aussi des variantes en algorithmie (façon de décompter la monnaie, trier les instances d'objets...), un exercice de style. 
+  * Tests pour éprouver les connaissances sur usage des Interfaces, des patrons de conception (Design Patterns) et des différents niveaux d'accessibilité. 
+  * Façon de voir et vérifier la façon de coder en général. 
+  * Il existe aussi des variantes en algorithmie (façon de décompter la monnaie, trier les instances d'objets, parcours de graphe...), un exercice de style. 
 
 ### Monnayeur / ChangeMachine / SlotMachine
 
@@ -137,13 +146,6 @@ Comme pour les autres exercices, l'objectif n'est pas de donner une solution, ma
   * Optimisations (Index, mémoire, parcours...) ; 
   * Accès aux données (droits, parcours, ...) ; 
   * ... 
-
-## Configuration Projet
-
-Eclipse
-Java 8
-Méthode 'main' dans chaque exemple (3) pour le 'CyberFizzBuzz'. 
-Méthode 'main' dans package dédié pour les "machines à sous". 
 
 ## Quelques liens sur le sujet CyberFizzBuzz (et la réflexion qui va avec, à propos de ce fameux test de recrutement en programmation / informatique)
 
