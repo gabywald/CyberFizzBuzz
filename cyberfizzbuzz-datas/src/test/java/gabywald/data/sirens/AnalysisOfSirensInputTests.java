@@ -46,21 +46,21 @@ class AnalysisOfSirensInputTests {
 	@Test
 	void testReadAndAnalyseFileAttempted() {
 		AnalysisOfSirensInputTests.sampleReadAndAnalysisFile(
-				"src/gabywald/data/sirens/sirens_fxt.txt", 
+				"src/test/resources/sirens_fxt.txt", 
 				77442, 2256, 77442 + 2256); // 79698
 	}
 	
 	@Test
 	void testReadAndAnalyseFileLittleTest01() {
 		AnalysisOfSirensInputTests.sampleReadAndAnalysisFile(
-				"src/gabywald/data/sirens/sirens_littleTest01.txt", 
+				"src/test/resources/sirens_littleTest01.txt", 
 				2, 1, 3);
 	}
 	
 	@Test
 	void testReadAndAnalyseFileLittleTest02() {
 		AnalysisOfSirensInputTests.sampleReadAndAnalysisFile(
-				"src/gabywald/data/sirens/sirens_littleTest02.txt", 
+				"src/test/resources/sirens_littleTest02.txt", 
 				2, 5, 7);
 	}
 

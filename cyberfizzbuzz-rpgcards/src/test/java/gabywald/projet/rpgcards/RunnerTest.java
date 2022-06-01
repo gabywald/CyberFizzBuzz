@@ -90,7 +90,7 @@ class RunnerTest {
 	public static List<Card> getBaseLoadedCards() {
 		if (RunnerTest.baseLoadedCards == null) {
 			// ***** Load the JSON source file => load JSON
-			JSONObject jsonCards = RunnerTest.readAsJSON("resources/rpgcards.json");
+			JSONObject jsonCards = RunnerTest.readAsJSON("src/main/resources/rpgcards.json");
 			// System.out.println( jsonCards );
 			// List<Card> loadedCards = RunnerTest.loadingCards(jsonCards);
 			RunnerTest.baseLoadedCards = RunnerTest.loadingCards(jsonCards);

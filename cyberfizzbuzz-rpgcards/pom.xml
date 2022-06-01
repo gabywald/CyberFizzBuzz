@@ -13,6 +13,16 @@
 	<name>CyberFizzBuzz RPGcards Example</name>
 	<description>CyberFizzBuzz RPGcards Example</description>
 
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20210307</version>
+		</dependency>
+		
+	</dependencies>
 
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
