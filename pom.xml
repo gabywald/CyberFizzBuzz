@@ -21,6 +21,7 @@
 		<module>cyberfizzbuzz-codinggames</module>
 		<module>cyberfizzbuzz-others</module>
 		<module>cyberfizzbuzz-datas</module>
+		<module>cyberfizzbuzz-coffeemachineproject</module>
 	</modules>
 
 	<build>
