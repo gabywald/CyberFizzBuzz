@@ -13,13 +13,6 @@
 	<name>CyberFizzBuzz in REST</name>
 	<description>CyberFizzBuzz in REST</description>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-		<junit.version>5.3.1</junit.version>
-	</properties>
-
 	<dependencies>
 
 		<!-- junit 5, unit test -->
@@ -77,20 +70,6 @@
 			<version>4.4.10</version>
 		</dependency>
 
-		<!-- junit 5, unit test -->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 
 	<build>

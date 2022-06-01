@@ -13,7 +13,6 @@
 	<name>CyberFizzBuzz SlotMachine Example</name>
 	<description>CyberFizzBuzz SlotMachine Example</description>
 
-
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<testSourceDirectory>src/test/java</testSourceDirectory>

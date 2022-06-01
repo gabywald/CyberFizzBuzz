@@ -13,7 +13,6 @@
 	<name>Other CyberFizzBuzz Examples</name>
 	<description>Other CyberFizzBuzz Examples</description>
 
-
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<testSourceDirectory>src/test/java</testSourceDirectory>
