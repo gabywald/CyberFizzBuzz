@@ -9,9 +9,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>cyberfizzbuzz-cyberfizzbuzz</artifactId>
-	<name>Main CyberFizzBuzz Example</name>
-	<description>Main CyberFizzBuzz Example</description>
+	<artifactId>cyberfizzbuzz-cyberfizzbuzzSpring</artifactId>
+	<name>FizzBuzz in Spring</name>
+	<description>FizzBuzz in Spring</description>
 
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>

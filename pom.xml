@@ -22,6 +22,8 @@
 		<module>cyberfizzbuzz-others</module>
 		<module>cyberfizzbuzz-datas</module>
 		<module>cyberfizzbuzz-coffeemachineproject</module>
+		<module>cyberfizzbuzz-cyberfizzbuzzREST</module>
+		<module>cyberfizzbuzz-cyberfizzbuzzSpring</module>
 	</modules>
 
 	<build>
