@@ -28,6 +28,7 @@ import gabywald.rest.httpclient.HttpConnection;
  * 
  * @author Gabriel Chandesris (2022)
  */
+@SuppressWarnings("restriction")
 class FizzBuzzJerseyTests {
 	
 	public HttpServer httpServer = null;
