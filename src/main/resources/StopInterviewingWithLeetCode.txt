@@ -1,46 +1,7 @@
-% Encoding: UTF-8
-
-@Proceedings{CyberFizzBuzzArticle,
-  title     = {Cyber FizzBuzz : r{\'e}flexion sur la s{\'e}lection de candidats dans le domaine de la SSI},
-  year      = {2014},
-  abstract  = {R{\'e}sum{\'e} Pour le recrutement, il est utile de disposer de questions standards permettant d’appr{\'e}cier rapidement l’aptitude des candidats {\`a} appr{\'e}hender divers sujets et approches. Nous pr{\'e}sentons dans cet article le processus de s{\'e}lection des candidats {\`a} une formation technique en SSI – des questions parfois {\'e}loign{\'e}es du cœur du sujet, mais dont nous justifions la pertinence.},
-  author    = {Jaeger, {\'E}ric and Levillain, Olivier and Lixi, Christian},
-  booktitle = {Organisation de la CyberS{\'e}curit{\'e}, Journ{\'e}e Sp{\'e}cifique ANSSI / SDE / CFSSI. Journ{\'e}e Specif CAMPUS du 7 novembre 2014, CNAM, Paris},
-}
-
-@OTHER{CyberFizzBuzzOther1,
-  title = {Fizz buzz (Wikipedia EN)},
-  url = {https://en.wikipedia.org/wiki/Fizz_buzz},
-}
-
-@OTHER{CyberFizzBuzzOtherCodingDojo,
-  title = {Coding Dojo : Fizz Buzz (Kata)},
-  url = {https://codingdojo.org/kata/FizzBuzz/},
-}
-
-@OTHER{CyberFizzBuzzOther2,
-  title = {Cyber FizzBuzz: r{\'e}flexion sur la s{\'e}lection de candidats
-dans le domaine de la SSI (PDF diapositives)},
-  url = {https://paperstreet.picty.org/yeye/resources/conf-ressi-JaegerLL18/slides.pdf},
-}
-
-@OTHER{CyberFizzBuzzOther3,
-  title = {Cyber FizzBuzz : r{\'e}flexion sur la s{\'e}lection de candidats dans le
-domaine de la SSI (PDF article)},
-  url = {https://ressi2018.sciencesconf.org/187155/document},
-}
-
-@Electronic{StopInterViewingWithLeetCode,
-  author   = {Charles F{\'e}val},
-  month    = {June},
-  year     = {2022},
-  title    = {Stop Interviewing With Leet Code},
-  language = {English},
-  url      = {https://fev.al/posts/leet-code/},
-  abstract = {https://fev.al/posts/leet-code/
+https://fev.al/posts/leet-code/
 
 
-Charles F{\'e}val
+Charles Féval
 
 Technical leader in Vancouver BC. Managing engineers at Microsoft.
 
@@ -103,7 +64,5 @@ Notes
 
     Using existing implementations rather than re-inventing the wheel is actually a good skill to check for. ↩
 
-    Of which, I am one. ↩},
-}
+    Of which, I am one. ↩
 
-@Comment{jabref-meta: databaseType:bibtex;}
