@@ -24,6 +24,7 @@
 		<module>cyberfizzbuzz-coffeemachineproject</module>
 		<module>cyberfizzbuzz-cyberfizzbuzzREST</module>
 		<module>cyberfizzbuzz-cyberfizzbuzzSpring</module>
+		<module>cyberfizzbuzz-picocli</module>
 	</modules>
 
 	<properties>
